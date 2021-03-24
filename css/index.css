@@ -1,0 +1,23 @@
+.blockimg{
+    -webkit-transition: 5s ease-out;
+    -moz-transition: 5s ease-out;
+    -o-transition: 5s ease-out;
+    transition: 5s ease-out;
+}
+
+.blockimg:hover{
+    background-position-y: 100%;
+}
+
+.blockimg{  
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 380px;
+    height: 380px;
+    min-height: 100px;
+    max-height: 460px;
+    border-radius: 16px;
+    background-color: #f1f1f1;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+}
