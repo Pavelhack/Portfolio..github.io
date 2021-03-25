@@ -1,5 +1,5 @@
 .scills_block{
-    background: #9fcdff;
+    background: azure;
 }
 .scills{
     display: flex;
@@ -8,6 +8,24 @@
     justify-content: space-evenly;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
+}
+
+.scill{
+    display: flex;
+    margin: 10px;
+    width: 150px;
+    height: 200px;
+    min-height: 80px;
+    max-height: 200px;
+    border: 2px solid #52e093;
+    border-radius: 16px;
+    color: #52e083;
+}
+
+.scill img{
+    margin: auto auto;
+    max-width: 120px;
 }
 
 .jobs_block{
