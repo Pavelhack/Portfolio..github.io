@@ -1,3 +1,29 @@
+.scills_block{
+    background: #9fcdff;
+}
+.scills{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-evenly;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.jobs_block{
+    background: white;
+}
+
+.jobs{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-evenly;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 .blockimg{
     -webkit-transition: 5s ease-out;
     -moz-transition: 5s ease-out;
@@ -9,14 +35,14 @@
     background-position-y: 100%;
 }
 
-.blockimg{  
-    position: relative;
+.blockimg{
+    margin: 10px;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 380px;
-    height: 380px;
+    width: 280px;
+    height: 280px;
     min-height: 100px;
-    max-height: 460px;
+    max-height: 280px;
     border-radius: 16px;
     background-color: #f1f1f1;
     box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);

@@ -190,7 +190,7 @@ a:focus {
 		display: none;
 	}
 	.frame {
-		position: fixed;
+		/*position: fixed;*/
 		text-align: left;
 		z-index: 10000;
 		top: 0;
