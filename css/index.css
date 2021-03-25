@@ -1,7 +1,7 @@
-.scills_block{
+.skills_block{
     background: azure;
 }
-.scills{
+.skills{
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -11,19 +11,19 @@
     padding: 20px;
 }
 
-.scill{
+.skill{
     display: flex;
     margin: 10px;
     width: 150px;
     height: 200px;
     min-height: 80px;
     max-height: 200px;
-    border: 2px solid #52e093;
-    border-radius: 16px;
+    /*border: 2px solid #52e093;*/
+    /*border-radius: 16px;*/
     color: #52e083;
 }
 
-.scill img{
+.skill img{
     margin: auto auto;
     max-width: 120px;
 }
@@ -57,11 +57,10 @@
     margin: 10px;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 280px;
+    width: 220px;
     height: 280px;
     min-height: 100px;
     max-height: 280px;
     border-radius: 16px;
     background-color: #f1f1f1;
-    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
 }
