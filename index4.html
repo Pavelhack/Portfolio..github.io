@@ -14,24 +14,17 @@
 	</head>
 	<body class="demo-4">
 		<main>
-			<div class="message">Tilt your phone to see the effect.</div>
-			<div class="frame" style="background-image: url(images/Chess.jpg);">
-				<div class="frame__title-wrap">
-					<h1 class="frame__title">Fake 3D Effect with Shaders</h1>
-					<p class="frame__tagline">Move your mouse around.</a></p>
+			<div class="main" style = "background-image: url(./images/W_B_background.jpg);">
+				<div class="main_code_photo">
+					<div class="code">
+						<!-- <div class="code"></div>  -->
+						<div class="gradient"></div>
+						<!-- <div class="gradient_right"></div> -->
+						<div class="photo">
+							<!-- <img src="./images/WB.jpg"/> -->
+						</div>
+					</div>
 				</div>
-				<div class="frame__links">
-					<a href="index3.html">Previous Demo</a>
-					<a href="https://tympanus.net/codrops/?p=38413">Article</a>
-				</div>
-				<a class="frame__github" href="http://webscript.by">GitHub</a>
-				<div class="frame__demos">
-					<a href="index.html" class="frame__demo">demo 1</a>
-					<a href="index2.html" class="frame__demo">demo 2</a>
-					<a href="index3.html" class="frame__demo">demo 3</a>
-					<a href="index4.html" class="frame__demo frame__demo--current">demo 4</a>
-				</div>
-				<div class="frame__content">DEMO</div>
 			</div>
 			<div class="skills_block">
 				<div class="skills_technical">
@@ -144,7 +137,16 @@
 				</div>
 			  </section>
 		</main>
-
+        <script>
+			document.getElementsByClassName("main")[0].addEventListener("mouseover", () =>{
+				document.getElementsByClassName("code")[0].classList.remove("code_background_back");
+				document.getElementsByClassName("code")[0].classList.add("code_background_go")
+			})
+			document.getElementsByClassName("main")[0].addEventListener("mouseout", () =>{
+				document.getElementsByClassName("code")[0].classList.remove("code_background_go");
+				document.getElementsByClassName("code")[0].classList.add("code_background_back")
+			})
+		</script>
 		<script src="js/app.js"></script>
 	</body>
 </html>

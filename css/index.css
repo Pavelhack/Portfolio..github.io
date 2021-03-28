@@ -1,3 +1,60 @@
+.main{
+  display: flex;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main_code_photo{
+  display: flex;
+  margin: auto auto;
+}
+  .code{
+    display: flex;
+    background-repeat: no-repeat;
+    height: inherit;
+    background-image: url(../images/background_short.png);
+  }
+    
+    .code_background_go{
+      background-position-y: 100%;
+    }
+    .code_background_back{
+      background-position-y: 0%;
+    }
+
+    .code_background_go,
+    .code_background_back{
+      -webkit-transition: 200s ease-out;
+      -moz-transition: 200s ease-out;
+      -o-transition: 200s ease-out;
+      transition: 200s ease-out;
+    }
+
+    .gradient{
+      display: flex;
+      width: 300px;
+      height: 480px;
+      background: linear-gradient(0deg, black 1%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, black 99%);
+    }
+
+    /* .gradient_right{
+      position: relative;
+      width: 300px;
+      height: 480px;
+      right: 560px;
+      background: linear-gradient(270deg, black 1%, rgba(0, 0, 0, 0) 50%);
+    } */
+  .photo{
+    display: flex;
+    margin: auto;
+    max-width: 720px;
+    max-height: 480px;
+    background-image: url(../images/WB.jpg);
+  }
+
+/*** SKILLS ***/
+
 .skills_block{
     background: rgb(224, 222, 222);
 }
