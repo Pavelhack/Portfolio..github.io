@@ -80,6 +80,9 @@
 			<section class="jobs_block" id ="PRODJECTS">
 				<div class="container">
 					<div class="jobs_exemple">
+						<div class="black_box">
+							<p>ECTS</p>
+						</div>
 						<h2>PROJECTS</h2>
 					</div>
 					<div class="jobs">
@@ -156,6 +159,7 @@
 			  </section>
 		</main>
 <script>
+    // *** start move background code ***//
 	const MAIN = document.getElementsByClassName("main")[0];
 	const CODE = document.getElementsByClassName("code")[0];
 
@@ -169,8 +173,13 @@
 		CODE.classList.add("code_background_back")
 	})
 
-    // *** move to links for sites *** //
+	// *** change uncolor icons on color *** //
+	const HTML = document.getElementsByClassName("html_css")[0].firstElementChild;
+    HTML.style = `hover: ${HTML.src} = ./icons/html_black.png}`
+	
 
+
+    // *** move to links for sites *** //
 	var linkNav = document.querySelectorAll('[href^="#"]');
     V = 0.5;  // скорость
     for (var i = 0; i < linkNav.length; i++) {

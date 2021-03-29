@@ -180,15 +180,27 @@ a {
     background:  rgb(224, 222, 222);
 }
 
+
+
 .jobs_exemple{
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 0px auto;
     text-align: center;
-    padding-top: 10px ;
 }
 
+  .black_box{
+    margin-left: 50%;
+    width: 50%;
+    height: 80px;
+    background-color: #000;
+  }
+    .black_box p{
+      color: white;
+      font-size: xx-large;
+    }
+
 .jobs_exemple h2{
-    margin: 86px auto;
+    margin: 20px auto;
     border-bottom: 2px solid black;
     color: #000;
     padding-bottom: 20px;
