@@ -11,7 +11,8 @@ a {
 }
 
 #Portfolio{
-  background-color: #f1f1f1;
+  margin: 0px;
+  background-color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   font-family: sans-serif;
 }
@@ -22,6 +23,7 @@ a {
 }
 
 .main{
+  max-width: 1136px;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -82,16 +84,13 @@ a {
     margin-top: 170px;
   }
 
-    
-
-
   .code{
     display: flex;
     margin: auto;
-    margin-left: 40px;
+    margin-right: 50px;
     margin-top: 170px;
     background-repeat: no-repeat;
-    background-image: url(../images/background_short.png);
+    background-image: url(../images/background_short_black.png);
   }
     
     .code_background_go{
@@ -103,15 +102,15 @@ a {
 
     .code_background_go,
     .code_background_back{
-      -webkit-transition: 200s ease-out;
-      -moz-transition: 200s ease-out;
-      -o-transition: 200s ease-out;
-      transition: 200s ease-out;
+      -webkit-transition: 400s ease-out;
+      -moz-transition: 400s ease-out;
+      -o-transition: 400s ease-out;
+      transition: 400s ease-out;
     }
 
     .gradient{
       display: flex;
-      width: 240px;
+      width: 300px;
       background: linear-gradient(0deg, black 1%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, black 99%);
     }
 
@@ -127,6 +126,7 @@ a {
 /*** SKILLS ***/
 
 .skills_block{
+    margin-top: 20px;
     background: rgb(224, 222, 222);
 }
 
@@ -174,7 +174,10 @@ a {
     opacity: 1;
 }
 
+/*** JOBS ***/
+
 .jobs_block{
+    margin-top: 20px;
     background:  rgb(224, 222, 222);
 }
 
@@ -228,14 +231,11 @@ a {
 /*** CONTACTS ***/
 
 .order-block {
+    margin-top: 20px;
     background: #222222 url(./images/black-bg.png) no-repeat center top/cover;
     padding-bottom: 120px;
   }
 
-  .container {
-    width: 1136px;
-    margin: 0 auto;
-  }
 
   .order-block__heading{
     max-width: 1200px;
