@@ -46,31 +46,31 @@
 					</div>
 					<div class="skills">
 						<div class= "skill html_css">
-							<img src="icons/html.png"/>
+							<img class = "skill_icon" src="icons/html_black.png"/>
 							<img class="shadow" src = "icons/shadow.png"/>
 						</div>
 						<div class= "skill git">
-							<img src="icons/git.png"/>
+							<img class = "skill_icon" src="icons/git_black.png"/>
 							<img class="shadow" src = "icons/shadow.png"/>
 						</div>
 						<div class= "skill js">
-							<img src="icons/javascript.png"/>
+							<img class = "skill_icon" src="icons/javascript_black.png"/>
 							<img class="shadow" src = "icons/shadow.png"/>
 						</div>
 						<div class= "skill react">
-							<img src="icons/react.png"/>
+							<img class = "skill_icon" src="icons/react_black.png"/>
 							<img class="shadow" src = "icons/shadow.png"/>
 						</div>
 						<div class= "skill redux_router">
-							<img src="icons/redux.png"/>
+							<img class = "skill_icon" src="icons/redux_black.png"/>
 							<img class="shadow" src = "icons/shadow.png"/>
 						</div>
 						<div class= "skill mysql">
-							<img src="icons/mysql.png"/>
+							<img class = "skill_icon" src="icons/mysql_black.png"/>
 							<img class="shadow" src = "icons/shadow.png"/>
 						</div>
 						<div class= "skill node.js">
-							<img src="icons/node.png"/>
+							<img class = "skill_icon" src="icons/node_black.png"/>
 							<img class="shadow" src = "icons/shadow.png"/>
 						</div>
 					</div>
@@ -101,6 +101,7 @@
 					</div>
 				</div>
 			</section>
+
 			<section class="order-block" id="CONTACTS">
 				<div class="container">
 				  <div class="order-block__heading">
@@ -174,9 +175,19 @@
 	})
 
 	// *** change uncolor icons on color *** //
-	const HTML = document.getElementsByClassName("html_css")[0].firstElementChild;
-    HTML.style = `hover: ${HTML.src} = ./icons/html_black.png}`
+	const SKILL = document.getElementsByClassName("skill_icon");
+	const STRING = /_black/gi;
+	const PNG = /.png/gi
 	
+	for(i = 0; i<= SKILL.length-1; i++){
+		SKILL[i].addEventListener("mouseover", (event) =>{
+			event.target.src = event.target.src.replace(STRING,"")
+		});
+		SKILL[i].addEventListener("mouseout", (event) =>{
+			event.target.src = event.target.src.replace(PNG,"_black.png")
+		});
+
+	}
 
 
     // *** move to links for sites *** //
