@@ -48,8 +48,8 @@
   .photo{
     display: flex;
     margin: auto;
-    max-width: 720px;
-    max-height: 480px;
+    width: 720px;
+    height: 480px;
     background-image: url(../images/WB.jpg);
   }
 
