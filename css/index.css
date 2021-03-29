@@ -1,18 +1,96 @@
-.main{
-  display: flex;
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
+ul {
+  list-style-type: none;
 }
 
-.main_code_photo{
-  display: flex;
-  margin: auto auto;
+a {
+  text-decoration: none;
 }
+
+.colortext{
+  color: red;
+}
+
+#Portfolio{
+  background-color: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
+}
+
+.inside_body{
+  margin: 0px auto;
+  max-width: 1200px;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-size: contain;
+}
+
+  .menu{
+    display: flex;
+    margin: 0px auto;
+  }
+    .header__nav{
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .header__nav-list {
+      display: flex;
+    }
+    
+    .header__nav-list li:not(:last-child) {
+      padding-right: 40px;
+    }
+    
+    .header__nav-list a {
+      color: #FFFFFF;
+      padding-bottom: 16px;
+      border-bottom: 1px solid transparent;
+      font-size: 18px;
+    }
+
+    .header__nav-list a:hover {
+      border-bottom: 2px solid white;
+    }
+
+    .header__nav-list2 {
+      display: flex;
+    }
+    
+    .header__nav-list2 li:not(:last-child) {
+      padding-right: 40px;
+    }
+    
+    .header__nav-list2 a {
+      color: #000;
+      padding-bottom: 16px;
+      border-bottom: 1px solid transparent;
+      font-size: 18px;
+    }
+
+    .header__nav-list2 a:hover {
+      border-bottom: 2px solid #000;
+    }
+
+  .text_about{
+    width: 50%;
+    color: #000;
+    margin-left: 51%;
+    margin-top: 170px;
+  }
+
+    
+
+
   .code{
     display: flex;
+    margin: auto;
+    margin-left: 40px;
+    margin-top: 170px;
     background-repeat: no-repeat;
-    height: inherit;
     background-image: url(../images/background_short.png);
   }
     
@@ -33,25 +111,18 @@
 
     .gradient{
       display: flex;
-      width: 300px;
-      height: 480px;
+      width: 240px;
       background: linear-gradient(0deg, black 1%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, black 99%);
     }
 
-    /* .gradient_right{
-      position: relative;
-      width: 300px;
-      height: 480px;
-      right: 560px;
-      background: linear-gradient(270deg, black 1%, rgba(0, 0, 0, 0) 50%);
-    } */
-  .photo{
-    display: flex;
-    margin: auto;
-    width: 720px;
-    height: 480px;
-    background-image: url(../images/WB.jpg);
-  }
+    .photo{
+      display: flex;
+      /* background-image: url(../images/Chess.jpg); */
+    }
+    .photo img{
+      width: 520px;
+      height: 380px;
+    }
 
 /*** SKILLS ***/
 

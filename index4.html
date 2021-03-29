@@ -3,30 +3,41 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Fake 3D Effect with WebGL Shaders | Demo 4 | Codrops</title>
-		<meta name="description" content="Demo of the tutorial on how to create a fake 3D image effect with WebGL shaders." />
-		<meta name="keywords" content="webgl, 3d, image, shader, javascript, tutorial, demo, web development, effect" />
-		<meta name="author" content="Codrops" />
+		<title>Portfolio</title>
+		<meta name="description" content="Portfolio Melnikov Pavel" />
+		<meta name="keywords" content="Portfolio, javascript, fron-End" />
+		<meta name="author" content="Pavel Melnikov" />
 		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/base.css" />
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
-		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
-	<body class="demo-4">
-		<main>
-			<div class="main" style = "background-image: url(./images/W_B_background.jpg);">
-				<div class="main_code_photo">
-					<div class="code">
-						<!-- <div class="code"></div>  -->
-						<div class="gradient"></div>
-						<!-- <div class="gradient_right"></div> -->
-						<div class="photo">
-							<!-- <img src="./images/WB.jpg"/> -->
-						</div>
+	<body id ="Portfolio">
+		<div class="inside_body">
+			<section class="main" style = "background-image: url(./images/W_B_background.jpg);">
+				<div class="menu">
+					<nav class="header__nav">
+					<ul class="header__nav-list">
+						<li><a href="#About-ME">ABOUT-ME</a></li>
+						<li><a href="#SKILLS">SKILLS</a></li>
+					</ul>
+					<ul class="header__nav-list2">
+						<li><a href="#PRODJECTS">PRODJECTS</a></li>
+						<li><a href="#CONTACTS">CONTACTS</a></li>
+					</ul>
+					</nav>
+				</div>
+				<div class="text_about">
+					<h1>Hi! I`m Pavel <span class="colortext"><bold>&ltbr /&gt</bold></span></h1>
+					<p>Fron-End developer.</p>
+				</div>
+				<div class="code">
+					<div class="gradient"></div>
+					<div class="photo">
+						<img src="./images/Chess.jpg"/>
 					</div>
 				</div>
-			</div>
-			<div class="skills_block">
+			</section>
+			<section class="skills_block" id = "SKILLS">
 				<div class="skills_technical">
 					<h2>TECHNICAL SKILLS</h2>
 				</div>
@@ -60,8 +71,8 @@
 						<img class="shadow" src = "icons/shadow.png"/>
 					</div>
 				</div>
-			</div>
-			<div class="jobs_block">
+			</section>
+			<section class="jobs_block" id ="PRODJECTS">
 				<div class="jobs_exemple">
 					<h2>PROJECTS</h2>
 				</div>
@@ -79,8 +90,8 @@
 						 style="background-image: url(./images/bowlingbrest.by.jpg);">
 					</div>
 				</div>
-			</div>
-			<section class="order-block" id="Order-form">
+			</section>
+			<section class="order-block" id="CONTACTS">
 				<div class="container">
 				  <div class="order-block__heading">
 					<h2>MY CONTACTS</h2>
@@ -137,16 +148,43 @@
 				</div>
 			  </section>
 		</main>
-        <script>
-			document.getElementsByClassName("main")[0].addEventListener("mouseover", () =>{
-				document.getElementsByClassName("code")[0].classList.remove("code_background_back");
-				document.getElementsByClassName("code")[0].classList.add("code_background_go")
-			})
-			document.getElementsByClassName("main")[0].addEventListener("mouseout", () =>{
-				document.getElementsByClassName("code")[0].classList.remove("code_background_go");
-				document.getElementsByClassName("code")[0].classList.add("code_background_back")
-			})
-		</script>
-		<script src="js/app.js"></script>
+<script>
+	const MAIN = document.getElementsByClassName("main")[0];
+	const CODE = document.getElementsByClassName("code")[0];
+
+	MAIN.addEventListener("mouseover", () =>{
+		CODE.classList.remove("code_background_back");
+		CODE.classList.add("code_background_go")
+	})
+
+	MAIN.addEventListener("mouseout", () =>{
+		CODE.classList.remove("code_background_go");
+		CODE.classList.add("code_background_back")
+	})
+
+    // *** move to links for sites *** //
+
+	var linkNav = document.querySelectorAll('[href^="#"]');
+    V = 0.5;  // скорость
+    for (var i = 0; i < linkNav.length; i++) {
+      if(i <= 4){linkNav[i].addEventListener("click",() => document.getElementsByClassName("sail_menu_active")[0].classList.remove("sail_menu_active") )}
+      linkNav[i].onclick = function(){
+        document.body.classList.remove("overflow_hidden");
+        var w = window.pageYOffset,
+            hash = this.href.replace(/[^#]*(.*)/, '$1');
+            t = document.querySelector(hash).getBoundingClientRect().top,
+            start = null;
+        requestAnimationFrame(step);
+        function step(time) {
+          if (start === null) start = time;
+          var progress = time - start,
+              r = (t < 0 ? Math.max(w - progress/V, w + t) : Math.min(w + progress/V, w + t));
+          window.scrollTo(0,r);
+          if (r != w + t) {requestAnimationFrame(step)} else {location.hash = hash}
+        }
+        return false;
+      }
+    }
+</script>
 	</body>
 </html>
