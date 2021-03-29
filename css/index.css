@@ -119,7 +119,7 @@ a {
       /* background-image: url(../images/Chess.jpg); */
     }
     .photo img{
-      width: 520px;
+      width: 570px;
       height: 380px;
     }
 
@@ -127,7 +127,6 @@ a {
 
 .skills_block{
     margin-top: 20px;
-    background: rgb(224, 222, 222);
 }
 
 .skills_technical{
