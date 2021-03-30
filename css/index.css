@@ -7,14 +7,18 @@ a {
 }
 
 .colortext{
-  color: red;
+  color: #3DADFF;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
 }
 
 #Portfolio{
   margin: 0px;
   background-color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
-  font-family: sans-serif;
+  font-family: Lato, sans-serif;
 }
 
 .inside_body{
@@ -51,11 +55,16 @@ a {
       color: #FFFFFF;
       padding-bottom: 16px;
       border-bottom: 1px solid transparent;
-      font-size: 18px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 23px;
+      line-height: 29px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
     }
 
     .header__nav-list a:hover {
-      border-bottom: 2px solid white;
+      border-bottom: 3px solid #3DADFF;
     }
 
     .header__nav-list2 {
@@ -70,25 +79,47 @@ a {
       color: #000;
       padding-bottom: 16px;
       border-bottom: 1px solid transparent;
-      font-size: 18px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 23px;
+      line-height: 29px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
     }
 
     .header__nav-list2 a:hover {
-      border-bottom: 2px solid #000;
+      border-bottom: 3px solid #3DADFF;
     }
 
   .text_about{
     width: 50%;
-    color: #000;
     margin-left: 51%;
-    margin-top: 170px;
+    margin-top: 60px;
+    color: #000;
   }
+    .text_about h1{
+      font-style: normal;
+      font-weight: bold;
+      font-size: 55px;
+      line-height: 72px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+
+    .text_about p{
+      font-style: normal;
+      font-weight: normal;
+      font-size: 22px;
+      line-height: 29px;
+      letter-spacing: 0.02em;
+      margin-top: 16px;
+    }
 
   .code{
     display: flex;
     margin: auto;
-    margin-right: 50px;
-    margin-top: 170px;
+    margin-top: 162px;
     background-repeat: no-repeat;
     background-image: url(../images/background_short_black.png);
   }
@@ -125,43 +156,36 @@ a {
 
 /*** SKILLS ***/
 
-.skills_block{
-    margin-top: 20px;
-}
-
 .skills_technical{
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 10px ;
+  max-width: 1200px;
+  margin: 120px auto 0;
+  text-align: center;
 }
 
 .skills_technical h2{
-    margin: 86px auto;
-    border-bottom: 2px solid black;
+    margin: 0 auto;
     color: #000;
-    padding-bottom: 20px;
-    font-size: xx-large;
+    font-size: 44px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
 }
 
 .skills{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    max-width: 1200px;
-    margin: 10px auto;
-    padding-bottom: 50px;
+    margin: 80px auto 0px;
 }
 
 .skill{
     display: flex;
     flex-direction: column;
-    margin: 10px;
     max-width: 150px;
+    margin-left: 20px;
 }
 
 .shadow{
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 .skill img{
@@ -169,51 +193,34 @@ a {
     max-width: 120px;
 }
 
-.skill img:hover{ 
-    opacity: 1;
-}
 
 /*** JOBS ***/
 
 .jobs_block{
-    margin-top: 20px;
-    background:  rgb(224, 222, 222);
+    margin-top: 120px;
+    background:  #000;
 }
-
-
 
 .jobs_exemple{
     max-width: 1200px;
-    margin: 0px auto;
+    margin: 120px auto 0px;
     text-align: center;
-}
-
-  .black_box{
-    margin-left: 50%;
-    width: 50%;
-    height: 80px;
-    background-color: #000;
-  }
-    .black_box p{
-      color: white;
-      font-size: xx-large;
     }
 
 .jobs_exemple h2{
-    margin: 20px auto;
-    border-bottom: 2px solid black;
-    color: #000;
-    padding-bottom: 20px;
-    font-size: xx-large;
+    color: #fff;
+    margin: 0px;
+    font-size: 44px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
 }
 
 .jobs{
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
+    margin: 80px auto;
     justify-content: space-evenly;
     max-width: 1200px;
-    padding-bottom: 50px;
 }
 
 .blockimg{
@@ -228,47 +235,49 @@ a {
 }
 
 .blockimg{
-    margin: 10px;
+    margin-left: 20px;
     background-size: cover;
     background-repeat: no-repeat;
     width: 220px;
     height: 280px;
     min-height: 100px;
     max-height: 280px;
-    border-radius: 16px;
     background-color: #f1f1f1;
 }
 
 /*** CONTACTS ***/
 
 .order-block {
-    margin-top: 20px;
-    background: #222222 url(./images/black-bg.png) no-repeat center top/cover;
-    padding-bottom: 120px;
+    background: #3DADFF;
   }
 
 
   .order-block__heading{
     max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 10px;
+    margin: 120px auto 0px;
   }
   
   .order-block__heading h2{
-    margin: 86px auto;
-    border-bottom: 2px solid white;
     color: #FFFFFF;
-    padding-bottom: 20px;
-    font-size: xx-large;
+    margin: 0px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 58px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
   }
   
+  .order-block__flex-container {
+    display: flex;
+    align-items: center;
+    margin: 80px 60px;
+  }
+
   .order-block__form {
-    /* background: linear-gradient(206.08deg, #FAD949 -70.14%, #F7C644 267.69%); */
-    background: linear-gradient(206.08deg, #52e093 -70.14%, #36c275 267.69%);
-    border-radius: 2px;
+    background-color: #000;
     width: 550px;
-    color: #222222;
+    color: #fff;
   }
   
   .order-block__form label {
@@ -276,16 +285,14 @@ a {
   }
   
   .order-block__form [type=text] {
-    width: 388px;
-    padding: 16px;
+    padding: 10px;
     font-size: 18px;
-    font-family: 'Gilroy', sans-serif;
   }
   
   .order-block__form form {
     display: flex;
     flex-direction: column;
-    padding: 64px 80px;
+    padding: 50px 40px;
   }
   
   .order-block__form p {
@@ -299,7 +306,6 @@ a {
     font-weight: 400;
     font-size: 40px;
     line-height: 130%;
-    padding-bottom: 24px;
   }
   
   .order-block__form-input {
@@ -307,6 +313,10 @@ a {
     flex-direction: column;
     padding-bottom: 24px;
   }
+    .order-block__form-input:nth-child(4) input{
+      height: 50px;
+
+    }
   
   .order-block__text {
     font-weight: 400;
@@ -370,13 +380,10 @@ a {
     color: #FFD109;
   }
   
-  .order-block__flex-container {
-    display: flex;
-    align-items: center;
-    margin-top: 120px;
-    margin-left: 20px;
-  }
+  
   
   .order-block-form--btn input[type=submit] {
     width: 100%;
+    height: 40px;
+    background: #007CD7;
   }

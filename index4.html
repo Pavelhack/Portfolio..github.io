@@ -18,17 +18,17 @@
 				<div class="menu">
 					<nav class="header__nav">
 					<ul class="header__nav-list">
-						<li><a href="#About-ME">ABOUT-ME</a></li>
+						<li><a href="#About-ME">ABOUT ME</a></li>
 						<li><a href="#SKILLS">SKILLS</a></li>
 					</ul>
 					<ul class="header__nav-list2">
-						<li><a href="#PRODJECTS">PRODJECTS</a></li>
+						<li><a href="#PRODJECTS">PROJECTS</a></li>
 						<li><a href="#CONTACTS">CONTACTS</a></li>
 					</ul>
 					</nav>
 				</div>
 				<div class="text_about">
-					<h1>Hi! I`m Pavel <span class="colortext"><bold>&ltbr /&gt</bold></span></h1>
+					<h1>Hi!</br> <span class="colortext">I`m Pavel</span></h1>
 					<p>I`m a Fron-End developer.</p>
 				</div>
 				<div class="code">
@@ -42,7 +42,7 @@
 			<section class="skills_block" id = "SKILLS">
 				<div class="container">
 					<div class="skills_technical">
-						<h2>TECHNICAL SKILLS</h2>
+						<h2>TECHNICAL <span class="colortext">SKILLS</span></h2>
 					</div>
 					<div class="skills">
 						<div class= "skill html_css">
@@ -80,10 +80,7 @@
 			<section class="jobs_block" id ="PRODJECTS">
 				<div class="container">
 					<div class="jobs_exemple">
-						<div class="black_box">
-							<p>ECTS</p>
-						</div>
-						<h2>PROJECTS</h2>
+						<h2>RELEVANT <span class="colortext">PROJECTS</span></h2>
 					</div>
 					<div class="jobs">
 						<div class="blockimg"
@@ -105,29 +102,27 @@
 			<section class="order-block" id="CONTACTS">
 				<div class="container">
 				  <div class="order-block__heading">
-					<h2>MY CONTACTS</h2>
+					<h2>CONTACTS</h2>
 				  </div>
 		  
 				  <div class="order-block__flex-container">
 		  
 					<div class="order-block__form">
 					  <form action="#">
-						<h4>I`ll answer you shortlly</h4>
+						<h4>I`ll answer <span class="colortext">you shortlly</span></h4>
 						<div class="order-block__form-input">
 						  <label for="name">your name</label>
-						  <input type="text" placeholder="what is your name?" id="name" required>
+						  <input type="text" id="name" required>
 						</div>
 						<div class="order-block__form-input">
 						  <label for="phone">your number</label>
-						  <input type="text" placeholder="+375 (25) 123 45 67" id="phone"
+						  <input type="text" id="phone"
 							pattern="375[0-9]{2}[0-9]{3}[0-9]{2}[0-9]{2}" required>
 						</div>
 						<div class="order-block__form-input">
 						  <label for="textarea">comment</label>
-						  <input type="text" placeholder="it place for comment here"
-							id="textarea">
+						  <input type="text" id="textarea">
 						</div>
-						<p>I`ll answer you shortlly </p>
 						<div class="order-block-form--btn">
 						  <input type="submit" value="submit">
 						</div>
@@ -176,15 +171,19 @@
 
 	// *** change uncolor icons on color *** //
 	const SKILL = document.getElementsByClassName("skill_icon");
+	const SHADOW = document.getElementsByClassName("shadow");
 	const STRING = /_black/gi;
 	const PNG = /.png/gi
 	
 	for(i = 0; i<= SKILL.length-1; i++){
 		SKILL[i].addEventListener("mouseover", (event) =>{
-			event.target.src = event.target.src.replace(STRING,"")
+			event.target.src = event.target.src.replace(STRING,"");
+			event.target.nextSibling.nextSibling.style = "opacity: 1"
 		});
 		SKILL[i].addEventListener("mouseout", (event) =>{
-			event.target.src = event.target.src.replace(PNG,"_black.png")
+			event.target.src = event.target.src.replace(PNG,"_black.png");
+			event.target.nextSibling.nextSibling.style = "opacity: 0.5"
+
 		});
 
 	}
