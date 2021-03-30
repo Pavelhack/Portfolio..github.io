@@ -300,8 +300,8 @@ a {
   
 /*** contacts text ***/    
   .order-block__text {
-    flex-direction: column;
     display: flex;
+    flex-direction: column;
     margin: 20px;
   }
     .order-block__call{
@@ -323,6 +323,8 @@ a {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
       .order-block_mail a{
         font-size: 20px;
