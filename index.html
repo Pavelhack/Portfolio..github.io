@@ -3,43 +3,165 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Fake 3D Effect with WebGL Shaders | Demo 1 | Codrops</title>
-		<meta name="description" content="Demo of the tutorial on how to create a fake 3D image effect with WebGL shaders." />
-		<meta name="keywords" content="webgl, 3d, image, shader, javascript, tutorial, demo, web development, effect" />
-		<meta name="author" content="Codrops" />
+		<title>Portfolio</title>
+		<meta name="description" content="Portfolio Melnikov Pavel" />
+		<meta name="keywords" content="Portfolio, javascript, fron-End" />
+		<meta name="author" content="Pavel Melnikov" />
 		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/base.css" />
-		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
-	<body class="demo-1">
-		<main>
-			<div class="message">Tilt your phone to see the effect.</div>
-			<div class="frame">
-				<div 
-					id="gl" 
-					data-imageOriginal="img/lady.jpg" 
-					data-imageDepth="img/lady-map.jpg" 
-					data-horizontalThreshold="35" 
-					data-verticalThreshold="15">
+	<body id ="Portfolio">
+		<div class="inside_body">
+
+			<section class="main" style = "background-image: url(./images/W_B_background.jpg);">
+				<div class="menu">
+					<nav class="header__nav">
+					<ul class="header__nav-list">
+						<li><a href="#About-ME">ABOUT ME</a></li>
+						<li><a href="#SKILLS">SKILLS</a></li>
+					</ul>
+					<ul class="header__nav-list2">
+						<li><a href="#PRODJECTS">PROJECTS</a></li>
+						<li><a href="#CONTACTS">CONTACTS</a></li>
+					</ul>
+					</nav>
 				</div>
-				<div class="frame__title-wrap">
-					<h1 class="frame__title">Fake 3D Effect with Shaders</h1>
-					<p class="frame__tagline">Move your mouse around.</a></p>
+				<div class="text_about">
+					<h1>Hi!</br> <span class="colortext">I`m Pavel</span></h1>
+					<p>I`m a Fron-End developer.</p>
 				</div>
-				<div class="frame__links">
-					<a href="index4.html">Previous Demo</a>
-					<a href="https://tympanus.net/codrops/?p=38413">Article</a>
+				<div class="code">
+					<div class="gradient"></div>
+					<div class="photo">
+						<img src="./images/WB.jpg"/>
+					</div>
 				</div>
-				<a class="frame__github" href="http://webscript.by">GitHub</a>
-				<div class="frame__demos">
-					<a href="index.html" class="frame__demo frame__demo--current">demo 1</a>
-					<a href="index2.html" class="frame__demo">demo 2</a>
-					<a href="index3.html" class="frame__demo">demo 3</a>
-					<a href="index4.html" class="frame__demo">demo 4</a>
+			</section>
+
+			<section class="skills_block" id = "SKILLS">
+				<div class="container">
+					<div class="skills_technical">
+						<h2>TECHNICAL <span class="colortext">SKILLS</span></h2>
+					</div>
+					<div class="skills">
+						<div class= "skill html_css">
+							<img class = "skill_icon" src="icons/html_black.png"/>
+							<img class="shadow" src = "icons/shadow.png"/>
+						</div>
+						<div class= "skill git">
+							<img class = "skill_icon" src="icons/git_black.png"/>
+							<img class="shadow" src = "icons/shadow.png"/>
+						</div>
+						<div class= "skill js">
+							<img class = "skill_icon" src="icons/javascript_black.png"/>
+							<img class="shadow" src = "icons/shadow.png"/>
+						</div>
+						<div class= "skill react">
+							<img class = "skill_icon" src="icons/react_black.png"/>
+							<img class="shadow" src = "icons/shadow.png"/>
+						</div>
+						<div class= "skill redux_router">
+							<img class = "skill_icon" src="icons/redux_black.png"/>
+							<img class="shadow" src = "icons/shadow.png"/>
+						</div>
+						<div class= "skill mysql">
+							<img class = "skill_icon" src="icons/mysql_black.png"/>
+							<img class="shadow" src = "icons/shadow.png"/>
+						</div>
+						<div class= "skill node.js">
+							<img class = "skill_icon" src="icons/node_black.png"/>
+							<img class="shadow" src = "icons/shadow.png"/>
+						</div>
+					</div>
+				</div>	
+			</section>
+
+			<section class="jobs_block" id ="PRODJECTS">
+				<div class="container">
+					<div class="jobs_exemple">
+						<h2>RELEVANT <span class="colortext">PROJECTS</span></h2>
+					</div>
+					<div class="jobs">
+						<div class="blockimg"
+							style="background-image: url(./images/webscript_black.by.jpg);">
+						</div>
+						<div class="blockimg"
+							style="background-image: url(./images/otdyhvgruzii_black.by.jpg);">
+						</div>
+						<div class="blockimg"
+							style="background-image: url(./images/krovmetal_black.by.jpg);">
+						</div>
+						<div class="blockimg"
+							style="background-image: url(./images/bowlingbrest_black.by.jpg);">
+						</div>
+					</div>
 				</div>
-				<div class="frame__content">QO</div>
-			</div>
+			</section>
+
+			<section class="order-block" id="CONTACTS">
+				<div class="container">
+				  <div class="order-block__heading">
+					<h2>CONTACTS</h2>
+				  </div>
+		  
+				  <div class="order-block__flex-container">
+		  
+					<div class="order-block__form">
+					  <form action="#">
+						<h4>I`ll answer <span class="colortext">you shortlly</span></h4>
+						<div class="order-block__form-input">
+						  <label for="name">your name</label>
+						  <input type="text" id="name" required>
+						</div>
+						<div class="order-block__form-input">
+						  <label for="phone">your number</label>
+						  <input type="text" id="phone">
+						</div>
+						<div class="order-block__form-input">
+						  <label for="textarea">comment</label>
+						  <input type="text" id="textarea">
+						</div>
+						<div class="order-block-form--btn">
+						  <input type="submit" value="submit">
+						</div>
+					  </form>
+					</div>
+		  
+					<div class="order-block__text">
+						<div class="order-block__call">
+							<div class ="call">
+								<img src = "./icons/viber.png" alt = "viber" style="max-height: 20px;"></img>
+								<img src = "./icons/telegram.png" alt="telegram" style="max-height: 20px;"></img>
+								<img src = "./icons/whatsapp.png" alt = "whatsapp" style="max-height: 20px;"></img>
+							</div>
+							<a href="tel:+375293852508">+375 (29) 385 25 08</a>
+						</div>
+						<div class="order-block_mail">
+							<img src="./icons/mail.png" style="max-height: 20px;" alt = "mail"/>
+							<a href="email:melnikovgru@gmail.com">melnikovgru@gmail.com</a>
+						</div>
+						<div class="order-block__adress">
+							<img src = "./icons/location.png" style="max-height: 20px;" alt = "location"/>
+							<p><i class="fas fa-map-marker-alt">Belarus, Gomel</i></p>
+						</div>
+						<div class="order-block__social">
+							<ul>
+								<li><a title="Viber" href="viber://chat?number=+375293852508"><i class="fab fa-viber"></i></a></li>
+								<li><a href="https://vk.com/webscriptby" target="_blank"><i class="fab fa-vk"></i></a></li>
+								<li><a href="https://www.instagram.com/webscript.by/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+								<li><a title="Telegram" href="tg://resolve?domain=Web_Script"><i class="fab fa-telegram-plane"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				  </div>
+		  
+				</div>
+			  </section>
 		</main>
-		<script src="js/app.js"></script>
+<script src="./js/index.js">
+    
+</script>
 	</body>
 </html>
