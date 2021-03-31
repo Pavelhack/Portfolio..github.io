@@ -84,16 +84,16 @@
 					</div>
 					<div class="jobs">
 						<div class="blockimg"
-							style="background-image: url(./images/webscript.by.JPG);">
+							style="background-image: url(./images/webscript_black.by.jpg);">
 						</div>
 						<div class="blockimg"
-							style="background-image: url(./images/otdyhvgruzii.by.jpg);">
+							style="background-image: url(./images/otdyhvgruzii_black.by.jpg);">
 						</div>
 						<div class="blockimg"
-							style="background-image: url(./images/krovmetal.by.jpg);">
+							style="background-image: url(./images/krovmetal_black.by.jpg);">
 						</div>
 						<div class="blockimg"
-							style="background-image: url(./images/bowlingbrest.by.jpg);">
+							style="background-image: url(./images/bowlingbrest_black.by.jpg);">
 						</div>
 					</div>
 				</div>
@@ -178,8 +178,10 @@
 	// *** change uncolor icons on color *** //
 	const SKILL = document.getElementsByClassName("skill_icon");
 	const SHADOW = document.getElementsByClassName("shadow");
+	const WEBSITE = document.getElementsByClassName("blockimg")
 	const STRING = /_black/gi;
-	const PNG = /.png/gi
+	const PNG = /.png/gi;
+	const JPG = /.jpg/gi
 	
 	for(i = 0; i<= SKILL.length-1; i++){
 		SKILL[i].addEventListener("mouseover", (event) =>{
@@ -189,11 +191,14 @@
 		SKILL[i].addEventListener("mouseout", (event) =>{
 			event.target.src = event.target.src.replace(PNG,"_black.png");
 			event.target.nextSibling.nextSibling.style = "opacity: 0.5"
-
 		});
-
 	}
 
+	// *** change uncolor image websites to color *** //
+	for(i = 0; i<= WEBSITE.length-1; i++){
+		WEBSITE[i].addEventListener("mouseover",() =>{
+			event.target.style.backgroundImage = getComputedStyle(event.target).backgroundImage.replace(STRING,"") } )
+		};
 
     // *** move to links for sites *** //
 	var linkNav = document.querySelectorAll('[href^="#"]');
