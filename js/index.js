@@ -33,7 +33,7 @@ for(i = 0; i<= SKILL.length-1; i++){
 
 // *** change uncolor image websites to color *** //
 for(i = 0; i<= WEBSITE.length-1; i++){
-    WEBSITE[i].addEventListener("mouseover",() =>{
+    WEBSITE[i].addEventListener("mouseover",(event) =>{
         event.target.style.backgroundImage = getComputedStyle(event.target).backgroundImage.replace(STRING,"") } )
     };
 
