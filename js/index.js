@@ -1,3 +1,40 @@
+/*********************************** Header *******************************************/
+let lineX, lineY, divs, elem, arrayBlock = [];
+
+function element() {
+  lineY = document.documentElement.clientHeight / 100 * 15; // округлить до целого числа
+  lineX = document.documentElement.clientWidth / 2;
+  return elem = document.elementFromPoint(lineX, lineY);
+}
+
+
+let downHeader = document.getElementsByClassName("menu__hide");
+let block = document.getElementById ("Portfolio");
+window.onload = function getArrayPoint() {
+  [].forEach.call(block.children, (elem) => {
+    divs = elem.getBoundingClientRect()
+    arrayBlock.push({
+      name: elem,
+      top: Math.round((divs.top) / 100) * 100
+    });
+  })
+};
+
+document.addEventListener("scroll", () => {
+  element();
+  let pointScroll = Math.round((pageYOffset + lineY) / 100) * 100;
+  switch (pointScroll) {
+    case 200:
+        console.log(downHeader[0].className, pointScroll)
+      return downHeader[0].classList.add("menu__hide_active")
+
+    case 100:
+        console.log(pointScroll+"-")
+      return downHeader[0].classList.remove("menu__hide_active")
+
+  }
+})
+
 // *** start move background code ***//
 const MAIN = document.getElementsByClassName("main")[0];
 const CODE = document.getElementsByClassName("code")[0];
