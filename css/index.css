@@ -38,6 +38,7 @@ a {
                 transition: opacity 2.5s,
                     transform .1s;
   /* display: none; */
+  z-index: -2;
 }
 
   .menu__hide_active{
@@ -97,7 +98,7 @@ a {
     .header__nav-list2 a{
       color: #FFFFFF;
       padding-bottom: 16px;
-      border-bottom: 1px solid transparent;
+      border-bottom: 3px solid transparent;
       font-size: 23px;
       line-height: 29px;
       letter-spacing: 0.02em;

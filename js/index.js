@@ -96,7 +96,6 @@ const TIMER = setInterval(()=>{
 document.addEventListener("scroll", () => {
   element();
   let point = Math.round((pageYOffset + lineY)/10);
-  console.log(point)
   switch (point) {
     case 64:
       return boolean()
