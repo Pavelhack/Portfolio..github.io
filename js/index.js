@@ -22,16 +22,16 @@ window.onload = function getArrayPoint() {
 
 document.addEventListener("scroll", () => {
   element();
-  let pointScroll = Math.round((pageYOffset + lineY) / 100) * 100;
+  let pointScroll = Math.round((pageYOffset + lineY)/100)*100;
   switch (pointScroll) {
     case 200:
-        console.log(downHeader[0].className, pointScroll)
       return downHeader[0].classList.add("menu__hide_active")
 
     case 100:
-        console.log(pointScroll+"-")
-      return downHeader[0].classList.remove("menu__hide_active")
-
+      return (
+              downHeader[0].classList.remove("menu__hide_active"),
+               bool = true
+               )
   }
 })
 
@@ -56,7 +56,53 @@ const WEBSITE = document.getElementsByClassName("blockimg");
 const SKILL_BLOCK = document.getElementsByClassName("skills_block")[0]
 const STRING = /_black/gi;
 const PNG = /.png/gi;
-const JPG = /.jpg/gi
+const JPG = /.jpg/gi;
+let bool = true;
+
+function boolean(){
+  if(bool){
+    bool = false
+    blink()
+  }
+}
+
+function blink(){
+let i = 0;
+let previousIcon;
+let previousShadow;
+
+const TIMER = setInterval(()=>{
+    if(previousIcon !== undefined){
+      previousIcon.src = previousIcon.src.replace(PNG,"_black.png");
+      previousShadow.style = "opacity: 0.5";
+    }
+    SKILL[i].src = SKILL[i].src.replace(STRING,"");
+    SHADOW[i].style = "opacity: 1"
+    previousIcon = SKILL[i]
+    previousShadow = SHADOW[i]
+    i++
+    if(i===SKILL.length) {
+      i = 0 
+    }
+  },70)
+
+  setTimeout(() => {
+      clearInterval(TIMER);
+      previousIcon.src = previousIcon.src.replace(PNG,"_black.png");
+      previousShadow.style = "opacity: 0.5";
+    }, 2500);
+}
+
+document.addEventListener("scroll", () => {
+  element();
+  let point = Math.round((pageYOffset + lineY)/10);
+  console.log(point)
+  switch (point) {
+    case 64:
+      return boolean()
+  }
+})
+
 
 for(i = 0; i<= SKILL.length-1; i++){
     SKILL[i].addEventListener("mouseover", (event) =>{
