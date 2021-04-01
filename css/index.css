@@ -23,7 +23,7 @@ a {
 
 .inside_body{
   margin: 0px auto;
-  max-width: 1200px;
+  /* max-width: 1200px; */
 }
 
 .menu__hide{
@@ -31,7 +31,7 @@ a {
   position: fixed;
   height: 100px;
   width: 100%;
-  max-width: 1200px;
+ /*  max-width: 1200px; */
   background-color: #3DADFF;
   opacity: 0;
   transform: scale(1);   
@@ -45,7 +45,7 @@ a {
     position: fixed;
     height: 100px;
     width: 100%;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     z-index: 2;
     background-color: #3DADFF;
     opacity: 1;
@@ -62,11 +62,14 @@ a {
   }
 
 .main{
-  max-width: 1200px;
+ /*  max-width: 1200px; */
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-size: contain;
+  -moz-background-size: 100%; /* Firefox 3.6+ */
+  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%; /* Opera 9.6+ */
+  background-size: 100%; /* Современные браузеры */
 }
 
   .menu{
@@ -278,7 +281,7 @@ a {
   }
 
   .order-block__heading{
-    max-width: 1200px;
+   /*  max-width: 1200px; */
     margin: 120px auto 0px;
   }
   
@@ -402,7 +405,7 @@ a {
   }
 
     .footer_block{
-      max-width: 1200px;
+      /* max-width: 1200px; */
       display: flex;
       flex-wrap: wrap;
       align-items: center;

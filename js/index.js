@@ -52,7 +52,8 @@ MAIN.addEventListener("mouseout", () =>{
 // *** change uncolor icons on color *** //
 const SKILL = document.getElementsByClassName("skill_icon");
 const SHADOW = document.getElementsByClassName("shadow");
-const WEBSITE = document.getElementsByClassName("blockimg")
+const WEBSITE = document.getElementsByClassName("blockimg");
+const SKILL_BLOCK = document.getElementsByClassName("skills_block")[0]
 const STRING = /_black/gi;
 const PNG = /.png/gi;
 const JPG = /.jpg/gi
