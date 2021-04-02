@@ -444,6 +444,15 @@ a {
     max-width: 425px;
   }
 
+  .skills_technical {
+    padding-top: 80px;
+  }
+
+  .jobs_exemple,
+  .order-block__heading{
+    margin: 80px auto 0px;
+  }
+
   .skills_technical h2,
   .jobs_exemple h2,
   .order-block__heading h2{
@@ -462,6 +471,10 @@ a {
   .order-block__flex-container{
     justify-content: center;
   } 
+
+  .order-block__text{
+    margin-top: 35px;
+  }
 
   .order-block__call a {
     font-size: 18px;
