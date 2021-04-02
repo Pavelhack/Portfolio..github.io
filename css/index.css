@@ -532,3 +532,38 @@ a {
     font-size: 16px;
   }
 }
+
+@media only screen and (max-width: 425px){
+  .photo img {
+    max-width: 320px;
+  }
+
+  .order-block__form{
+    width: 320px;
+  }
+
+  .text_about h1,
+  .skills_technical h2,
+  .jobs_exemple h2,
+  .order-block__heading h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .text_about p {
+    font-size: 10px;
+    line-height: 5px;
+    margin-top: 5px;
+  }
+
+  .skill img {
+    max-width: 70px;
+  }
+
+  .order-block__call a,
+  .order-block_mail a,
+  .order-block__adress p{
+    margin-left: 0px;
+    margin-top: 8px;
+  }
+}
