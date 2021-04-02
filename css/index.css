@@ -13,6 +13,7 @@ a {
 .container{
   display: flex;
   flex-direction: column;
+  margin: 20px auto;
 }
 
 #Portfolio{
@@ -144,8 +145,7 @@ a {
       /* background-image: url(../images/Chess.jpg); */
     }
     .photo img{
-      width: 570px;
-      height: 380px;
+      max-width: 570px;
     }
 
 /*** SKILLS ***/
@@ -315,7 +315,7 @@ a {
   .order-block__text {
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    margin: 20px auto;
   }
     .order-block__call{
       display: flex;
@@ -414,6 +414,23 @@ a {
 /*** screen 768 ****/
 
 @media only screen and (max-width: 768px){
+  .header__nav-list a,
+  .header__nav-list2 a{
+    padding-bottom: 14px;
+    font-size: 12px;
+    line-height: 27px;
+  }
+
+  .text_about h1 {
+    font-size: 35px;
+    line-height: 40px;
+  }
+
+  .text_about p {
+    font-size: 13px;
+    line-height: 10px;
+    margin-top: 8px;
+  }
 
   .code{
     background-image: none;
@@ -421,5 +438,84 @@ a {
 
   .gradient{
     display: none;
+  }
+
+  .photo img{
+    max-width: 425px;
+  }
+
+  .skills_technical h2,
+  .jobs_exemple h2,
+  .order-block__heading h2{
+    font-size: 35px;
+  }
+
+  .skill img {
+    max-width: 100px;
+  }
+
+  .order-block__form h4 {
+    font-weight: 200;
+    font-size: 30px;
+  }
+
+  .order-block__flex-container{
+    justify-content: center;
+  } 
+
+  .order-block__call a {
+    font-size: 18px;
+  }
+
+  .order-block_mail a {
+    font-size: 18px;
+  }
+
+  .order-block__adress p {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 425px){ 
+  .header__nav-list a,
+  .header__nav-list2 a {
+      font-size: 10px;
+  }
+
+  .photo img{
+    max-width: 375px
+  }
+
+  .text_about h1 {
+    font-size: 28px;
+    line-height: 35px;
+  }
+
+  .text_about p {
+    font-size: 11px;
+    line-height: 5px;
+    margin-top: 6px;
+  }
+
+  .skills_technical h2,
+  .jobs_exemple h2,
+  .order-block__heading h2 {
+    font-size: 28px;
+  }
+
+  .skill img {
+    max-width: 80px;
+  }
+
+  .order-block__form h4 {
+    font-weight: 200;
+    font-size: 20px;
+    line-height: none;
+  }
+
+  .order-block__call a,
+  .order-block_mail a,
+  .order-block__adress p{
+    font-size: 16px;
   }
 }
