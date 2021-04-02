@@ -7,34 +7,6 @@ function element() {
   return elem = document.elementFromPoint(lineX, lineY);
 }
 
-
-let downHeader = document.getElementsByClassName("menu__hide");
-let block = document.getElementById ("Portfolio");
-window.onload = function getArrayPoint() {
-  [].forEach.call(block.children, (elem) => {
-    divs = elem.getBoundingClientRect()
-    arrayBlock.push({
-      name: elem,
-      top: Math.round((divs.top) / 100) * 100
-    });
-  })
-};
-
-document.addEventListener("scroll", () => {
-  element();
-  let pointScroll = Math.round((pageYOffset + lineY)/100)*100;
-  switch (pointScroll) {
-    case 200:
-      return downHeader[0].classList.add("menu__hide_active")
-
-    case 100:
-      return (
-              downHeader[0].classList.remove("menu__hide_active"),
-               bool = true
-               )
-  }
-})
-
 // *** start move background code ***//
 const MAIN = document.getElementsByClassName("main")[0];
 const CODE = document.getElementsByClassName("code")[0];
@@ -71,19 +43,19 @@ let i = 0;
 let previousIcon;
 let previousShadow;
 
-const TIMER = setInterval(()=>{
-    if(previousIcon !== undefined){
-      previousIcon.src = previousIcon.src.replace(PNG,"_black.png");
-      previousShadow.style = "opacity: 0.5";
-    }
-    SKILL[i].src = SKILL[i].src.replace(STRING,"");
-    SHADOW[i].style = "opacity: 1"
-    previousIcon = SKILL[i]
-    previousShadow = SHADOW[i]
-    i++
-    if(i===SKILL.length) {
-      i = 0 
-    }
+  const TIMER = setInterval(()=>{
+      if(previousIcon !== undefined){
+        previousIcon.src = previousIcon.src.replace(PNG,"_black.png");
+        previousShadow.style = "opacity: 0.5";
+      }
+      SKILL[i].src = SKILL[i].src.replace(STRING,"");
+      SHADOW[i].style = "opacity: 1"
+      previousIcon = SKILL[i]
+      previousShadow = SHADOW[i]
+      i++
+      if(i===SKILL.length) {
+        i = 0 
+      }
   },70)
 
   setTimeout(() => {
@@ -93,14 +65,29 @@ const TIMER = setInterval(()=>{
     }, 2500);
 }
 
-document.addEventListener("scroll", () => {
-  element();
-  let point = Math.round((pageYOffset + lineY)/10);
-  switch (point) {
-    case 64:
-      return boolean()
-  }
-})
+let downHeader = document.getElementsByClassName("menu__hide");
+let block = document.getElementById ("Portfolio");
+window.onload = function getArrayPoint() {
+  [].forEach.call(block.children, (elem) => {
+    divs = elem.getBoundingClientRect()
+    arrayBlock.push({
+      name: elem,
+      top: Math.round((divs.top) / 100) * 100
+    });
+  })
+};
+
+  document.addEventListener("scroll", () => {
+    element();
+    let point = Math.round((pageYOffset + lineY)/100)*100;
+    switch (point) {
+      case 100:
+        return bool = true
+
+      case 600:
+        return boolean()
+    }
+  })
 
 
 for(i = 0; i<= SKILL.length-1; i++){

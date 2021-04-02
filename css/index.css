@@ -26,42 +26,6 @@ a {
   /* max-width: 1200px; */
 }
 
-.menu__hide{
-  display: flex;
-  position: fixed;
-  height: 100px;
-  width: 100%;
- /*  max-width: 1200px; */
-  background-color: #3DADFF;
-  opacity: 0;
-  transform: scale(1);   
-                transition: opacity 2.5s,
-                    transform .1s;
-  /* display: none; */
-  z-index: -2;
-}
-
-  .menu__hide_active{
-    display: flex;
-    position: fixed;
-    height: 100px;
-    width: 100%;
-    /* max-width: 1200px; */
-    z-index: 2;
-    background-color: #3DADFF;
-    opacity: 1;
-                transform: scale(1);   
-                transition: opacity 3.3s,
-                    transform 3.3s;
-
-  }
-
-  .header__nav_hide{
-    margin: 48px auto;
-    display: flex;
-    flex-direction: row;
-  }
-
 .main{
  /*  max-width: 1200px; */
   display: flex;
@@ -162,15 +126,15 @@ a {
 
     .code_background_go,
     .code_background_back{
-      -webkit-transition: 400s ease-out;
-      -moz-transition: 400s ease-out;
-      -o-transition: 400s ease-out;
-      transition: 400s ease-out;
+      -webkit-transition: 100s ease-out;
+      -moz-transition: 100s ease-out;
+      -o-transition: 100s ease-out;
+      transition: 100s ease-out;
     }
 
     .gradient{
       display: flex;
-      width: 300px;
+      width: 250px;
       background: linear-gradient(0deg, black 1%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, black 99%);
     }
 
