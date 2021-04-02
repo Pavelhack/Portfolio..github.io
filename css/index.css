@@ -567,3 +567,144 @@ a {
     margin-top: 8px;
   }
 }
+
+ /* ****************************************************************************************** */
+    
+ body.overflow_hidden {
+  overflow: hidden;
+}
+
+.sail_menu {
+  display: none;
+  z-index: 2;
+  position: fixed;
+  width: 284px;
+  height: 814px;
+  background: #3DADFF;
+}
+
+.sail_menu_active {
+  margin-left: 91px;
+  display: flex;
+  flex-direction: column;
+  -webkit-animation-name: moveLeft;
+  -webkit-animation-duration: 0.8s;
+   animation-name: moveLeft;
+   animation-duration: 0.8s;
+
+}
+
+  @-webkit-keyframes moveLeft {
+      from {
+              margin-left: 376px;
+      }
+      to{
+              margin-right:91px;
+      }
+  }
+  @keyframes moveLeft {
+      from {
+              margin-left:376px;
+         
+      }
+      to{
+              margin-left:91px;
+      }
+  }
+
+
+
+.sail_menu_header{
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  margin: 20px auto;
+  width: 244px;
+}
+  .sail_menu_logo{
+      display: flex;
+  }
+      .sail_menu_logo img{
+          width: 89px;
+          height: 40px;
+      }
+
+  .sail_menu_closed{
+      display: flex;
+      margin: auto 0;
+  }
+      .sail_menu_closed img{
+          width: 25px;
+          height: 25px;
+      }
+
+.sail_menu_body{
+  display: flex;
+  flex-direction: column;
+}
+  .sail_menu_row{
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      width: auto;
+      margin-top: 115px;
+      
+  }
+      .sail_Benefits_menu,
+      .sail_Serves_menu,
+      .sail_Prices_menu,
+      .sail_Portfolio_menu,
+      .sail_Contacts_menu{
+          display: flex;
+          margin: 35px auto 0;
+          font-family: Gilroy;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 28px;
+          color: #151515;
+          }
+          .sail_Benefits_menu{
+              margin-top: 0;
+          }
+      .sail_Benefits_menu a,
+      .sail_Serves_menu a,
+      .sail_Prices_menu a,
+      .sail_Portfolio_menu a,
+      .sail_Contacts_menu a{
+          text-decoration: none;
+          font-family: Gilroy;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 28px;
+          color: #151515;    
+      }    
+
+  .sail_number_phone{
+          display: flex;
+          margin: 124px auto 0;
+          font-family: Gilroy;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 29px;
+             
+  }
+      .sail_number_phone a{
+          text-decoration: none;
+          color: #151515; 
+      }
+
+      .sail_Social_Network{
+          display: flex;
+          justify-content: space-between;
+          margin: 40px auto;
+          padding: 0;
+          width:181px;
+      }
+
+  .sail{
+      text-align: center;
+      margin: 0 auto;
+  }
