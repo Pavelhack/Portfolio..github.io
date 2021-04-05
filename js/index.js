@@ -59,19 +59,22 @@ let previousShadow;
       clearInterval(TIMER);
       previousIcon.src = previousIcon.src.replace(PNG,"_black.png");
       previousShadow.style = "opacity: 0.5";
-    }, 2500);
+  }, 2500);
 }
 
-  document.addEventListener("scroll", () => {
-    let point = Math.round(pageYOffset/10)*10
-    switch (point) {
-      case 100:
-        return bool = true
+document.addEventListener("scroll", () => {
+  let point = Math.round(pageYOffset/10)*10
+  switch (point) {
+    case 0:
+      return ChekBool()
 
-      case 500:
-        return boolean()
-    }
-  })
+    case 100:
+      return bool = true
+
+    case 500:
+      return boolean()
+  }
+})
 
 for(i = 0; i<= SKILL.length-1; i++){
     SKILL[i].addEventListener("mouseover", (event) =>{
@@ -104,15 +107,31 @@ for(i = 0; i<= WEBSITE.length-1; i++){
         event.target.style.backgroundImage = getComputedStyle(event.target).backgroundImage.replace(STRING,"") } )
     };
 
-// *** if clientWidth <= 1024 *** //  
-if(document.body.clientWidth <= 1024){
-  addEventListener("scroll",  fun = () => {
+// *** if clientWidth <= 1024 change clorless my photo to color by scroll*** // 
+let flag = true;
+
+const ChekBool = () =>{
+  if(!flag){
+    funScroll();
+    flag = true
+  }
+  
+}
+
+const funScroll = () =>{
+  if(document.body.clientWidth <= 1024){
+    IMG.src = IMG.src.replace(STRING,"");
+    addEventListener("scroll",  fun = () => {
       if(window.pageYOffset >= 500){
+        flag = false
         IMG.src = IMG.src.replace(JPG,"_black.jpg");
         removeEventListener("scroll", fun)
       }
-  })
-} 
+    })
+
+  } 
+}
+funScroll();
    
 
 // *** move to links for sites *** //
