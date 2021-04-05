@@ -1,12 +1,6 @@
 /*********************************** Header *******************************************/
 let lineX, lineY, divs, elem, arrayBlock = [];
 
-function element() {
-  lineY = document.documentElement.clientHeight / 100 * 15; // округлить до целого числа
-  lineX = document.documentElement.clientWidth / 2;
-  return elem = document.elementFromPoint(lineX, lineY);
-}
-
 // *** start move background code and change my photo color => black-white***//
 const MAIN = document.getElementsByClassName("main")[0];
 const CODE = document.getElementsByClassName("code")[0];
@@ -24,7 +18,7 @@ MAIN.addEventListener("mouseout", () =>{
     IMG.src = IMG.src.replace(JPG,"_black.jpg");
 })
 
-// *** change uncolor icons on color *** //
+// *** change colorless icons on color *** //
 const SKILL = document.getElementsByClassName("skill_icon");
 const SHADOW = document.getElementsByClassName("shadow");
 const WEBSITE = document.getElementsByClassName("blockimg");
@@ -36,8 +30,8 @@ let bool = true;
 
 function boolean(){
   if(bool){
-    bool = false
-    blink()
+    bool = false;
+    blink();
   }
 }
 
@@ -68,26 +62,13 @@ let previousShadow;
     }, 2500);
 }
 
-let downHeader = document.getElementsByClassName("menu__hide");
-let block = document.getElementById ("Portfolio");
-window.onload = function getArrayPoint() {
-  [].forEach.call(block.children, (elem) => {
-    divs = elem.getBoundingClientRect()
-    arrayBlock.push({
-      name: elem,
-      top: Math.round((divs.top) / 100) * 100
-    });
-  })
-};
-
   document.addEventListener("scroll", () => {
-    element();
-    let point = Math.round((pageYOffset + lineY)/100)*100;
+    let point = Math.round(pageYOffset/10)*10
     switch (point) {
       case 100:
         return bool = true
 
-      case 600:
+      case 500:
         return boolean()
     }
   })
@@ -117,11 +98,22 @@ document.getElementsByClassName("sail_menu_closed")[0].addEventListener("click",
 })
 
 
-// *** change uncolor image websites to color *** //
+// *** change colorless image websites to color *** //
 for(i = 0; i<= WEBSITE.length-1; i++){
     WEBSITE[i].addEventListener("mouseover",(event) =>{
         event.target.style.backgroundImage = getComputedStyle(event.target).backgroundImage.replace(STRING,"") } )
     };
+
+// *** if clientWidth <= 1024 *** //  
+if(document.body.clientWidth <= 1024){
+  addEventListener("scroll",  fun = () => {
+      if(window.pageYOffset >= 500){
+        IMG.src = IMG.src.replace(JPG,"_black.jpg");
+        removeEventListener("scroll", fun)
+      }
+  })
+} 
+   
 
 // *** move to links for sites *** //
 var linkNav = document.querySelectorAll('[href^="#"]');
