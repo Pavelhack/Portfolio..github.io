@@ -106,7 +106,7 @@ for(i = 0; i<= SKILL.length-1; i++){
 // *** show menu 357 *** ///                     
 document.getElementsByClassName("humburger_menu")[0].children[0].addEventListener("click",() => {
   document.body.classList.add("overflow_hidden");
-  document.getElementsByClassName("sail_menu")[0].classList.add("sail_menu_active")
+  document.getElementsByClassName("sail_menu")[0].classList.add("sail_menu_active");
   
 })
 
@@ -114,7 +114,6 @@ document.getElementsByClassName("humburger_menu")[0].children[0].addEventListene
 document.getElementsByClassName("sail_menu_closed")[0].addEventListener("click",() => {
   document.body.classList.remove("overflow_hidden");
   document.getElementsByClassName("sail_menu_active")[0].classList.remove("sail_menu_active");
-  
 })
 
 

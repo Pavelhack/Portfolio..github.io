@@ -496,7 +496,7 @@ a {
   .header__nav-list2 a {
       font-size: 10px;
   }
-  
+
   .photo img {
     max-width: 340px;
   }
@@ -579,13 +579,6 @@ a {
   .skill img {
     max-width: 70px;
   }
-
-  .order-block__call a,
-  .order-block_mail a,
-  .order-block__adress p{
-    margin-left: 0px;
-    margin-top: 8px;
-  }
 }
 
 @media only screen and (max-width: 320px){
@@ -615,7 +608,7 @@ a {
 }
 
 .sail_menu_active {
-  margin-left: 91px;
+  /* margin-left: 91px; */
   display: flex;
   flex-direction: column;
   -webkit-animation-name: moveLeft;
@@ -626,20 +619,34 @@ a {
 }
 
   @-webkit-keyframes moveLeft {
-      from {
+      /* from {
               margin-left: 376px;
       }
       to{
               margin-right:91px;
+      } */
+
+      from {
+        margin-left: -285px;
+      }
+      to{
+        margin-left:0px;
       }
   }
   @keyframes moveLeft {
-      from {
+      /* from {
               margin-left:376px;
          
       }
       to{
               margin-left:91px;
+      } */
+
+      from {
+        margin-left: -285px;
+      }
+      to{
+        margin-left:0px;
       }
   }
 
