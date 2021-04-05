@@ -7,18 +7,21 @@ function element() {
   return elem = document.elementFromPoint(lineX, lineY);
 }
 
-// *** start move background code ***//
+// *** start move background code and change my photo color => black-white***//
 const MAIN = document.getElementsByClassName("main")[0];
 const CODE = document.getElementsByClassName("code")[0];
+const IMG = document.getElementsByClassName("photo")[0].children[0]
 
 MAIN.addEventListener("mouseover", () =>{
     CODE.classList.remove("code_background_back");
     CODE.classList.add("code_background_go")
+    IMG.src = IMG.src.replace(STRING,"");
 })
 
 MAIN.addEventListener("mouseout", () =>{
     CODE.classList.remove("code_background_go");
-    CODE.classList.add("code_background_back")
+    CODE.classList.add("code_background_back");
+    IMG.src = IMG.src.replace(JPG,"_black.jpg");
 })
 
 // *** change uncolor icons on color *** //
@@ -89,7 +92,6 @@ window.onload = function getArrayPoint() {
     }
   })
 
-
 for(i = 0; i<= SKILL.length-1; i++){
     SKILL[i].addEventListener("mouseover", (event) =>{
         event.target.src = event.target.src.replace(STRING,"");
@@ -100,6 +102,21 @@ for(i = 0; i<= SKILL.length-1; i++){
         event.target.nextSibling.nextSibling.style = "opacity: 0.5"
     });
 }
+
+// *** show menu 357 *** ///                     
+document.getElementsByClassName("humburger_menu")[0].children[0].addEventListener("click",() => {
+  document.body.classList.add("overflow_hidden");
+  document.getElementsByClassName("sail_menu")[0].classList.add("sail_menu_active")
+  
+})
+
+//*** closed menu 357 *** ///
+document.getElementsByClassName("sail_menu_closed")[0].addEventListener("click",() => {
+  document.body.classList.remove("overflow_hidden");
+  document.getElementsByClassName("sail_menu_active")[0].classList.remove("sail_menu_active");
+  
+})
+
 
 // *** change uncolor image websites to color *** //
 for(i = 0; i<= WEBSITE.length-1; i++){

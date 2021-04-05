@@ -13,7 +13,6 @@ a {
 .container{
   display: flex;
   flex-direction: column;
-  margin: 20px auto;
 }
 
 #Portfolio{
@@ -37,6 +36,9 @@ a {
   -o-background-size: 100%; /* Opera 9.6+ */
   background-size: 100%; /* Современные браузеры */
 }
+  .mobile_menu{
+    display: none;
+  }
 
   .menu{
     display: flex;
@@ -145,7 +147,7 @@ a {
       /* background-image: url(../images/Chess.jpg); */
     }
     .photo img{
-      max-width: 570px;
+      max-width: 350px;
     }
 
 /*** SKILLS ***/
@@ -441,7 +443,7 @@ a {
   }
 
   .photo img{
-    max-width: 425px;
+    max-width: 350px;
   }
 
   .skills_technical {
@@ -494,9 +496,9 @@ a {
   .header__nav-list2 a {
       font-size: 10px;
   }
-
-  .photo img{
-    max-width: 375px
+  
+  .photo img {
+    max-width: 340px;
   }
 
   .text_about h1 {
@@ -533,13 +535,31 @@ a {
   }
 }
 
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 375px){
+  .menu{
+    display: none;
+  }
+
+  .mobile_menu{
+    display: flex;
+  }
+
+  .humburger_menu{
+    margin: 10px auto;
+    width: 320px;
+  }
+
   .photo img {
     max-width: 320px;
   }
-
+  
   .order-block__form{
     width: 320px;
+  }
+
+  .mobile_menu img{
+    width: 50px;
+    height: 50px;
   }
 
   .text_about h1,
@@ -565,6 +585,17 @@ a {
   .order-block__adress p{
     margin-left: 0px;
     margin-top: 8px;
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .mobile_menu_inside{
+    width: 280px;
+    margin: 10px auto;
+  }
+
+  .photo img {
+    max-width: 280px;
   }
 }
 
