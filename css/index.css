@@ -148,6 +148,7 @@ a {
     }
     .photo img{
       max-width: 350px;
+      max-height: 380px;
     }
 
 /*** SKILLS ***/
@@ -235,10 +236,9 @@ a {
     margin: 20px;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 220px;
-    height: 280px;
-    min-height: 100px;
-    max-height: 280px;
+    width: 280px;
+    height: 330px;
+    
     background-color: #f1f1f1;
 }
 
@@ -499,6 +499,7 @@ a {
 
   .photo img {
     max-width: 340px;
+    height: 360px;
   }
 
   .text_about h1 {
@@ -551,6 +552,7 @@ a {
 
   .photo img {
     max-width: 320px;
+    height: 350px;
   }
   
   .order-block__form{
@@ -589,6 +591,7 @@ a {
 
   .photo img {
     max-width: 280px;
+    height: 300px;
   }
 }
 
