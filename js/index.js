@@ -102,10 +102,10 @@ document.getElementsByClassName("sail_menu_closed")[0].addEventListener("click",
 
 
 // *** change colorless image websites to color *** //
-for(i = 0; i<= WEBSITE.length-1; i++){
+/* for(i = 0; i<= WEBSITE.length-1; i++){
     WEBSITE[i].addEventListener("mouseover",(event) =>{
         event.target.style.backgroundImage = getComputedStyle(event.target).backgroundImage.replace(STRING,"") } )
-    };
+    }; */
 
 // *** if clientWidth <= 1024 change clorless my photo to color by scroll*** // 
 let flag = true;
