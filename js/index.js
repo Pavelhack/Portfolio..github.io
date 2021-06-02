@@ -59,7 +59,7 @@ let previousShadow;
       clearInterval(TIMER);
       previousIcon.src = previousIcon.src.replace(PNG,"_black.png");
       previousShadow.style = "opacity: 0.5";
-  }, 2500);
+  }, 3500);
 }
 
 document.addEventListener("scroll", () => {

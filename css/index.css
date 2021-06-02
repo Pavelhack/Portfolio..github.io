@@ -238,7 +238,7 @@ a {
     background-repeat: no-repeat;
     width: 280px;
     height: 330px;
-    
+    cursor: pointer;
     background-color: #f1f1f1;
 }
 
